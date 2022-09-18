@@ -1,0 +1,10 @@
+.contenu-footer
+{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+footer .bloc
+{
+    width: 50%;
+}

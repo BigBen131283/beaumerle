@@ -1,0 +1,70 @@
+footer
+{
+    flex-shrink: 0;
+    border-top: 1px dashed #000;
+    width: 100%;
+    background: #f1f1f1;
+    color: #333;
+}
+
+.contenu-footer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+footer .bloc
+{
+    width: 100%;
+    margin: 5px 0px;
+    padding: 0px 5px;
+}
+
+.footer-services h3,
+.footer-contact h3,
+.footer-horaires h3,
+.footer-networks h3
+{
+    font-size: 1.7rem;
+    padding-bottom: 10px;
+}
+
+.footer-contact p
+{
+    padding: 3px 0;
+}
+
+.footer-services ul,
+.footer-horaires ul,
+.footer-networks ul
+{
+    list-style-type: none;
+}
+
+.footer-services li,
+.footer-horaires li,
+.footer-networks li
+{
+    padding: 3px 0;
+}
+
+.footer-services li a,
+.footer-networks li a
+{
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.footer-services ion-icon,
+.footer-contact ion-icon,
+.footer-horaires ion-icon,
+.footer-networks ion-icon
+{
+    font-size: 2rem;
+    padding-right: 1vw;
+}
