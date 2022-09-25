@@ -1,4 +1,4 @@
-.gallery .button a:hover
+.gallery .button:hover a
 {
     background: var(--clr);
     color: var(--clr)
