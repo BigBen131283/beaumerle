@@ -12,6 +12,7 @@ nav
     transition: top .3s;
     transition-delay: .2s;
     background: rgba(0,0,0,.8);
+    z-index: 99;
 }
 
 .navigation.hidden
