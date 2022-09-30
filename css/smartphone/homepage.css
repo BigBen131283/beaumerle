@@ -8,6 +8,7 @@
 .content
 {
     position: relative;
+    padding-top: 80px;
 }
 
 .content .logo
@@ -67,16 +68,14 @@
     transition: 1s all cubic-bezier(.5, 0, 0, 1);
 }
 
-.header-large
+.home img
 {
-    background-image: url(../../images/homepageimages/enclume.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: block;
     width: 100%;
+    object-fit: cover;
+    object-position: center;
     height: 50vh;
 }
-
 .gallery
 {
     height: 100vh;
@@ -158,10 +157,11 @@
 .gallery-left
 {
     display: flex;
+    position: absolute;
     justify-content: flex-end;
     align-items: center;
     height: 50vh;
-    translate: 343%;
+    translate: 0%;
     animation: translationL 20s ease-in-out infinite;
 }
 
@@ -180,11 +180,11 @@
     display: block;
     object-fit: cover;
     object-position: center;
-    height: 100%;
-    width: 100%;
+    /* height: 100%; */
+    width: 20%;
 }
 
-@keyframes translationL
+/* @keyframes translationL
 {
     0%
     {
@@ -214,4 +214,9 @@
     {
         translate: -343%
     }
+} */
+
+.bloc1, .bloc2
+{
+    display: flex;
 }
