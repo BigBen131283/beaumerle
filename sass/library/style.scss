@@ -1,0 +1,31 @@
+@import "reset.scss";
+@import "fonts.scss";
+
+body
+{
+    background: #333;
+    font-family: "Acme", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenu
+{
+    // grow shrink basis
+    flex: 1 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section
+{
+    width: 100%;
+}
+
