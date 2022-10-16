@@ -1,0 +1,115 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montez&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+body {
+  background: #333;
+  font-family: "Acme", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contenu {
+  flex: 1 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+}
+
+footer {
+  flex-shrink: 0;
+  border-top: 1px dashed #292929;
+  width: 100%;
+  background: #f1f1f1;
+  color: #292929;
+}
+footer .contenu-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+footer .bloc {
+  width: 100%;
+  margin: 5px 0px;
+  padding: 0px 5px;
+}
+footer .bloc h3 {
+  font-size: 1.7rem;
+  padding-bottom: 10px;
+}
+footer .bloc ul {
+  list-style-type: none;
+}
+footer .bloc ul li {
+  padding: 3px 0;
+}
+footer .bloc ul li a {
+  text-decoration: none;
+  color: #292929;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+footer .bloc ul li ion-icon {
+  font-size: 2rem;
+  padding-right: 1vw;
+}
+
+/*# sourceMappingURL=footer.css.map */

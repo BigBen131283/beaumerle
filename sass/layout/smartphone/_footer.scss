@@ -1,0 +1,46 @@
+@import '../../base/style';
+@import '../../utils/variables';
+
+footer{
+    flex-shrink: 0;
+    border-top: 1px dashed $alternateBackground;
+    width: 100%;
+    background: $tertiaryColor;
+    color: $alternateBackground;
+
+    .contenu-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .bloc{
+        width: 100%;
+        margin: 5px 0px;
+        padding: 0px 5px;
+
+        h3{
+            font-size: 1.7rem;
+            padding-bottom: 10px;
+        }
+        ul{
+            list-style-type: none;
+
+            li{
+                padding: 3px 0;
+
+                a{
+                    text-decoration: none;
+                    color: $alternateBackground;
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.3rem;
+                }
+                ion-icon{
+                    font-size: 2rem;
+                    padding-right: 1vw;
+                }
+            }
+        }
+    }
+}

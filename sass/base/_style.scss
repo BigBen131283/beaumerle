@@ -1,9 +1,10 @@
-@import "reset.scss";
-@import "fonts.scss";
+@import "./reset";
+@import "./typography";
+@import "../utils/variables";
 
 body
 {
-    background: #333;
+    background: $background;
     font-family: "Acme", sans-serif;
     min-height: 100vh;
     display: flex;
