@@ -1,6 +1,7 @@
 @import '../../base/style';
 @import '../../layout/smartphone/navigation';
 @import '../../layout/smartphone/footer';
+@import '../../components/buttons';
 
 .home
 {
@@ -47,6 +48,13 @@
                 animation: rotation 15s linear infinite;
                 opacity: .1;
             }
+        }
+        img{
+            display: block;
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+            object-position: center;
         }
     }
     @keyframes rotation {
