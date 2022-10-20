@@ -7,3 +7,186 @@
 @import './layout/navigation';
 @import './layout/footer';
 @import './pages/home';
+
+
+.home
+{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    .content{
+        position: relative;
+        padding-top: 80px;
+
+        .name{
+            position: relative;
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1{
+                font-family: 'Cinzel Decorative', sans-serif;
+                font-size: 2.7rem;
+                font-weight: 600;
+
+                &.reveal{
+                    opacity: 0;
+                    transform: translateY(-30px);
+                }
+                &.reveal-visible{
+                    opacity: 1;
+                    transform: translateY(0px);
+                    transition: 1s all cubic-bezier(.5, 0, 0, 1);
+                }
+            }
+            .logo{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 250px;
+                height: 250px;
+                transform-origin: 0 0;
+                animation: rotation 15s linear infinite;
+                opacity: .1;
+            }
+        }
+        img{
+            display: block;
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    @keyframes rotation {
+        0%{
+            rotate: 0;
+        }
+        100%{
+            rotate: 360deg;
+        }
+    }
+}
+.gallery{
+    min-height: 100vh;
+    
+    .button{
+        position: absolute;
+        top: 17vw;
+        right: 5vw;
+    }
+    .frame-small{
+        position: absolute;
+        top: 5vw;
+        left: -20vw;
+        width: 80%;
+        height: 50vw;
+        background: $alternateBackground;
+        z-index: 2;
+
+        .lines{
+            position: absolute;
+            inset: 0;
+            background: #000;
+            overflow: hidden;
+
+            &:before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 600px;
+                height: 120px;
+                background: linear-gradient(transparent,
+                                            $secondaryColor,
+                                            $secondaryColor,
+                                            $secondaryColor,
+                                            transparent);
+                animation: border-rotate 8s linear infinite;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                inset: 3px;
+                background: $alternateBackground;
+            }
+        }
+    }
+    .frame-big{
+        position: absolute;
+        bottom: 10vw;
+        right: 0;
+        width: 70%;
+        height: 130vw;
+        background: $alternateBackground;
+        z-index: 3;
+
+        .lines
+        {
+            position: absolute;
+            inset: 0;
+            background: #000;
+            overflow: hidden;
+
+            &:before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 600px;
+                height: 120px;
+                background: linear-gradient(transparent,
+                                            $tertiaryColor,
+                                            $tertiaryColor,
+                                            $tertiaryColor,
+                                            transparent);
+                animation: border-rotate2 12s linear infinite;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                inset: 3px;
+                background: $alternateBackground;
+            }
+        }
+    }
+    .carousel{
+        height: 90vw;
+        width: 90vw;
+        z-index: 4;
+        position: absolute;
+        bottom: 22vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @keyframes border-rotate {
+        0%{
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100%{
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+
+    @keyframes border-rotate2 {
+        0%{
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+        100%{
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+    }
+}
+.instructions
+{
+    background: $alternateBackground;
+    color: $tertiaryColor;
+}

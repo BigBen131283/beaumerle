@@ -11,6 +11,7 @@ body
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 100%;
 }
 
 .contenu
@@ -28,5 +29,6 @@ body
 section
 {
     width: 100%;
+    position: relative;
 }
 
