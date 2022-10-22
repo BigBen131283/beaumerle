@@ -4,12 +4,12 @@
     position: relative;
     width: 300px;
     height: 450px;
-    background: #f1f1f1;
+    background: $background;
 
     .lines{
         position: absolute;
         inset: 0;
-        background: #000;
+        background: $backgroundLines;
         overflow: hidden;
 
         &:before{
@@ -21,9 +21,9 @@
             width: 600px;
             height: 120px;
             background: linear-gradient(transparent, 
-                                       #45f3ff, 
-                                       #45f3ff, 
-                                       #45f3ff,
+                                       $frame1, 
+                                       $frame1, 
+                                       $frame1,
                                        transparent);
             animation: border-rotate 4s linear infinite;
         }
@@ -41,7 +41,7 @@
         transform: translate(-50%);
         width: 200px;
         height: 200px;
-        background: #000;
+        background: $backgroundLines;
         transition: 0.5s;
         z-index: 10;
         overflow: hidden;
@@ -55,9 +55,9 @@
             height: 150px;
             transform: translate(-50%, -50%);
             background: linear-gradient(transparent, 
-                                       #ffef3c, 
-                                       #ffef3c, 
-                                       #ffef3c,
+                                       $frame2, 
+                                       $frame2, 
+                                       $frame2,
                                        transparent);
             animation: border-rotate2 6s linear infinite;
         }
@@ -65,7 +65,7 @@
             content: '';
             position: absolute;
             inset: 3px;
-            background: #292929;
+            background: $cardBackground;
         }
         img{
             position: absolute;
@@ -94,14 +94,14 @@
             transform: translateY(60px);
 
             h2{
-                font-family: 'Cinzel Decorative', sans-serif;
+                font-family: $title;
                 font-size: 2.20rem;
-                color: #ffef3c;
+                color: $title;
 
                 span{
                     font-size: 1.25rem;
-                    font-family: 'Acme', sans-serif;
-                    color: #f1f1f1;
+                    font-family: $main;
+                    color: $alternateText;
                 }
             }
             .data
@@ -113,7 +113,7 @@
 
                 h3{
                     font-size: 1rem;
-                    color: #f1f1f1;
+                    color: $alternateText;
                     line-height: 1.2rem;
                 }
             }
@@ -128,13 +128,13 @@
                     outline: none;
                     border-radius: 5px;
                     font-size: 1rem;
-                    font-family: 'Acme', sans-serif;
+                    font-family: $main;
                     font-weight: 500;
-                    background: #45f3ff;
+                    background: $buttonDetails;
                     cursor: pointer;
 
                     &:nth-child(2){
-                        background: #f1f1f1;
+                        background: $buttonContact;
                     }
                 }
             }

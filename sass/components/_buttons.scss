@@ -7,7 +7,7 @@
     a{
         position: relative;
         background: $background;
-        color: $tertiaryColor;
+        color: $alternateText;
         text-decoration: none;
         text-transform: uppercase;
         font-size: 1.5rem;
@@ -64,8 +64,8 @@
         &:hover{
 
             a{
-                background: var(--clr);
-                color: var(--clr);
+                background: $buttonNext;
+                color: $buttonNext;
 
                 i{
 

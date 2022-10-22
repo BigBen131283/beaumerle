@@ -1,11 +1,9 @@
-@import "./reset";
-@import "./typography";
-@import "../utils/variables";
+
 
 body
 {
     background: $background;
-    font-family: "Acme", sans-serif;
+    font-family: $main;
     min-height: 100vh;
     display: flex;
     justify-content: center;
