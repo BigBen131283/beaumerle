@@ -1,14 +1,22 @@
-let navigation = document.querySelector(".navigation");
+const menuToggle = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('.navigation');
+
+let container = document.querySelector(".container");
 let lastScrollValue = 0;
 
 document.addEventListener('scroll', () => {
     let top = document.documentElement.scrollTop;
     if(lastScrollValue < top){
-        navigation.classList.add("hidden");
+        container.classList.add("hidden");
     }
     else
     {
-        navigation.classList.remove("hidden");
+        container.classList.remove("hidden");
     }
     lastScrollValue = top;
 })
+
+menuToggle.onclick = function(){
+    navigation.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+}
