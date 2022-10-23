@@ -191,8 +191,6 @@ header {
     background: rgba(51, 51, 51, 0.403); }
     header .container.hidden {
       top: -80px; }
-    header .container .nav-largeScreen {
-      display: none; }
     header .container img.logo {
       width: 75px;
       height: 75px;
@@ -337,7 +335,7 @@ footer {
           font-size: 2rem;
           padding-right: 1vw; }
 
-.home {
+#home {
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -349,9 +347,9 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center; }
-  .home .content {
+  #home .content {
     position: relative; }
-    .home .content .name {
+    #home .content .name {
       position: relative;
       width: 100%;
       background: #f1f1f1;
@@ -359,33 +357,34 @@ footer {
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-      .home .content .name h1 {
+      #home .content .name h1 {
         font-family: "Cinzel Decorative", sans-serif;
         font-size: 2.7rem;
         font-weight: 600;
         text-align: center; }
-        .home .content .name h1.reveal {
+        #home .content .name h1.reveal {
           opacity: 0;
           transform: translateY(-30px); }
-        .home .content .name h1.reveal-visible {
+        #home .content .name h1.reveal-visible {
           opacity: 1;
           transform: translateY(0px);
           transition: 1s all cubic-bezier(0.5, 0, 0, 1); }
 
-.catalog {
-  padding: 20px 0; }
-  .catalog .button {
+#catalog {
+  padding: 20px 0 0px;
+  background: #333; }
+  #catalog .button {
     width: 250px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 1; }
-  .catalog .banner {
+  #catalog .banner {
     width: 100%;
     position: relative;
     overflow: hidden;
     height: 50vh; }
-    .catalog .banner img {
+    #catalog .banner img {
       max-width: none;
       position: absolute;
       top: 0;
@@ -400,6 +399,114 @@ footer {
   100% {
     transform: translateX(0); } }
 
-.instructions {
+#services {
+  position: relative;
+  width: 100%; }
+  #services .container {
+    padding: 85px 0 85px 5px;
+    position: relative; }
+    #services .container:before {
+      position: absolute;
+      content: '';
+      inset: 0;
+      background-image: url(../images/knife/cuisine.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      filter: grayscale(100%) brightness(0.9); }
+    #services .container h1 {
+      position: relative;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      font-family: "Cinzel Decorative", sans-serif;
+      font-weight: 600;
+      color: #f0eee3;
+      padding-bottom: 20px;
+      border-bottom: 2px solid rgba(74, 71, 71, 0.387); }
+    #services .container ul {
+      z-index: 2;
+      position: relative; }
+      #services .container ul li {
+        text-transform: uppercase;
+        font-size: 3.125rem;
+        border-bottom: 2px solid rgba(74, 71, 71, 0.387); }
+        #services .container ul li a {
+          text-decoration: none;
+          color: #f1f1f1; }
+
+#instructions {
+  background: #f1f1f1;
+  color: #333;
+  padding: 40px 5px; }
+  #instructions h1 {
+    width: 100%;
+    text-align: center;
+    font-family: "Cinzel Decorative", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600; }
+  #instructions .wrapper {
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 15px 5px; }
+    #instructions .wrapper img {
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      max-width: 300px; }
+    #instructions .wrapper .number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #f1f1f1;
+      font-size: 5rem;
+      font-weight: 600; }
+  #instructions p {
+    text-align: justify;
+    font-size: 1.2rem; }
+
+#events {
+  width: 100%;
   background: #333;
-  color: #45f3ff; }
+  padding: 30px 5px; }
+  #events h1 {
+    width: 100%;
+    text-align: center;
+    font-family: "Cinzel Decorative", sans-serif;
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: #f0eee3;
+    padding-bottom: 20px; }
+  #events table {
+    border: 1px solid #f1f1f1; }
+    #events table thead {
+      color: #f1f1f1;
+      border: 1px solid #f1f1f1; }
+      #events table thead th {
+        border: 1px solid #f1f1f1; }
+    #events table tbody {
+      background: #f1f1f1;
+      border: #f1f1f1; }
+      #events table tbody tr {
+        border: 1px solid #333; }
+        #events table tbody tr td {
+          border: 1px solid #333;
+          padding: 1px 2px; }
+
+#workshop {
+  width: 100%;
+  padding: 30px 5px; }
+  #workshop h1 {
+    width: 100%;
+    text-align: center;
+    font-family: "Cinzel Decorative", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    padding-bottom: 20px; }
+  #workshop iframe {
+    width: 100%; }

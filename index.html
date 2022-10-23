@@ -16,10 +16,6 @@
 <body>
     <header>
         <div class="container">
-            <div class="nav-largeScreen"></div>
-            <img src="./images/logo1.png" alt="Logo Beau Merle" class="logo">
-            <div class="about">Rencontres</div>
-            <div class="menu-toggle"></div>
             <nav class="navigation">
                 <ul>
                     <li class="list">
@@ -42,10 +38,13 @@
                     </li>
                 </ul>
             </nav>
+            <img src="./images/logo1.png" alt="Logo Beau Merle" class="logo">
+            <div class="about">Rencontres</div>
+            <div class="menu-toggle"></div>
         </div>
     </header>
     <div class="contenu">
-        <section class="home">
+        <section id="home">
             <div class="content">
                 <div class="name">
                     <h1 class="reveal">Beau Merle</h1>
@@ -53,7 +52,7 @@
                 </div>
             </div>
         </section>
-        <section class="catalog">
+        <section id="catalog">
             <div class="button">
                 <a href="#"><span>Nos créations</span><i></i></a>
             </div>
@@ -61,37 +60,93 @@
                 <img src="./images/banner.png" alt="Catalogue">
             </div>
         </section>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#333" fill-opacity="1" d="M0,224L120,229.3C240,235,480,245,720,218.7C960,192,1200,128,1320,
-                                                     96L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,
-                                                     320,120,320L0,320Z">
-            </path>
-        </svg>
-        <section class="instructions">
-            <h2>Pour faire simple</h2>
+        <section id="services">
+            <div class="container">
+                <h1>Nos Services</h1>
+                <ul class="reveal">
+                    <li class="service cuisine active"><a href="#">Cuisine</a></li>
+                    <li class="service poche"><a href="#">Poche</a></li>
+                    <li class="service table"><a href="#">Table</a></li>
+                    <li class="service collection"><a href="#">Collection</a></li>
+                    <li class="service autres"><a href="#">Autres</a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="instructions">
+            <h1>Commandes et informations</h1>
             <ul>
                 <li class="step">
                     <div class="article">
-                        <img src="" alt="">
-                        <span></span>
+                        <div class="wrapper">
+                            <img src="./images/homepageimages/artisanat.jpg" alt="step 1">
+                            <p class="number">1</p>
+                        </div>
+                        <p>
+                            Si un couteau vous plait, vous pouvez me contacter.</br>
+                            Je fabrique des pièces uniques.
+                        </p>
                     </div>
-                    <p></p>
                 </li>
                 <li class="step">
                     <div class="article">
-                        <img src="" alt="">
-                        <span></span>
+                        <div class="wrapper">
+                            <img src="./images/homepageimages/materiaux.jpg" alt="step 2">
+                            <p class="number">2</p>
+                        </div>
+                        <p>
+                            Vous pouvez également me contacter pour me demander un couteau personnalisé. </br>
+                            Mes couteaux sont fabriqués avec différents matériaux pour le manche et la lame et je propose différents
+                            mécanismes et accessoires. </br>
+                            Nous pouvons également aborder d'autres éléments de personnalisation.
+                        </p>
                     </div>
-                    <p></p>
                 </li>
                 <li class="step">
                     <div class="article">
-                        <img src="" alt="">
-                        <span></span>
+                        <div class="wrapper">
+                            <img src="./images/homepageimages/money.jpg" alt="step 3">
+                            <p class="number">3</p>
+                        </div>
+                        <p>
+                            Je privilégie le virement comme mode de règlement. </br>
+                            A la réception du paiement je vous fais parvenir vos achats en recommandé à l'adresse souhaitée.</br>
+                        </p>
                     </div>
-                    <p></p>
                 </li>
             </ul>
+        </section>
+        <section id="events">
+            <h1>Nos prochains salons</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="1">Date</th>
+                        <th colspan="1">Nom</th>
+                        <th colspan="1">Adresse</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="date">18.12.2022</td>
+                        <td class="name">Paris Knifes Week</td>
+                        <td class="address">Parc des expositions - Porte de Versailles</td>
+                    </tr>
+                    <tr>
+                        <td class="date">13.01.2023</td>
+                        <td class="name">Marché de Brives la Gaillarde</td>
+                        <td class="address">Place du marché</td>
+                    </tr>
+                    <tr>
+                        <td class="date">20.01.2023</td>
+                        <td class="name">Fête du cochon</td>
+                        <td class="address">Salle Justin Bridou, Saint-Jean-Pied-de-Porc 64220</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="workshop">
+            <h1>L'atelier</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d691.4358282440386!2d4.177253510868741!3d45.91800827506115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sdk!4v1666552867020!5m2!1sfr!2sdk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </div>
     <footer>
