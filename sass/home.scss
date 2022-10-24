@@ -133,7 +133,6 @@
             li{
                 text-transform: uppercase;
                 font-size: 3.125rem;
-                //penser à mettre des border top bottom
                 border-bottom: 2px solid $lightBorder;
                 
                 a{
@@ -158,34 +157,45 @@
         font-size: 1.5rem;
         font-weight: 600;
     }
-    .wrapper{
-        inset: 0;
+    .article{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: relative;
-        padding: 15px 5px;
-        img{
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center;
-            max-width: 300px;
+        width: 100%;
+        .wrapper{
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 15px 5px;
+            img{
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+                max-width: 300px;
+            }
+            .number{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $alternateText;
+                font-size: 5rem;
+                font-weight: 600;
+            }
+    
         }
-        .number{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: $alternateText;
-            font-size: 5rem;
-            font-weight: 600;
+        p{
+            text-align: justify;
+            font-size: 1.2rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
-
-    }
-    p{
-        text-align: justify;
-        font-size: 1.2rem;
     }
 }
 
