@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6 {
 ul {
   list-style: none; }
 
-button, input, select {
+button, input, .new-knife .new-knife-container .form select, select {
   margin: 0; }
 
 html {
@@ -79,6 +79,9 @@ header {
     transition: top .3s;
     transition-delay: .4s;
     background: rgba(51, 51, 51, 0.403); }
+    @media screen and (min-width: 1024px) {
+      header .container {
+        padding: 2px 10px; } }
     header .container.hidden {
       top: -80px; }
     header .container img.logo {
@@ -96,7 +99,7 @@ header {
       z-index: 99; }
       @media screen and (min-width: 1024px) {
         header .container .menu-toggle {
-          cursor: pointer; } }
+          display: none; } }
       header .container .menu-toggle:before {
         content: '';
         position: absolute;
@@ -183,15 +186,43 @@ header {
               justify-content: center;
               align-items: center;
               padding: 0px 5px; }
+      @media screen and (min-width: 1024px) {
+        header .container .navigation {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          scale: 1;
+          background: none;
+          width: 50%;
+          height: 80px; }
+          header .container .navigation ul {
+            flex-direction: row; }
+            header .container .navigation ul li {
+              height: 100%; }
+              header .container .navigation ul li a {
+                color: #f1f1f1; } }
 
-.categories {
+body {
+  background-image: url(../images/loginpage/fire.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.contenu {
+  justify-content: flex-start;
+  padding: 0px 30px; }
+
+.categories, .new-knife, .events {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #00141fb3;
-  padding-top: 20px; }
-  .categories h1 {
+  padding-top: 20px;
+  margin: 100px 0px; }
+  .categories h1, .new-knife h1, .events h1 {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -200,34 +231,34 @@ header {
     font-weight: 600;
     font-size: 1.7rem;
     color: #f1f1f1; }
-  .categories .categories-container {
+  .categories .categories-container, .new-knife .categories-container, .events .categories-container, .new-knife .new-knife-container, .events .events-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 20px 5px; }
-    .categories .categories-container .form {
+    .categories .categories-container .form, .new-knife .categories-container .form, .events .categories-container .form, .new-knife .new-knife-container .form, .events .events-container .form {
       width: 20%;
       padding: 10px; }
-      .categories .categories-container .form .input-group {
+      .categories .categories-container .form .input-group, .new-knife .categories-container .form .input-group, .events .categories-container .form .input-group, .new-knife .new-knife-container .form .input-group, .events .events-container .form .input-group {
         display: flex;
         flex-direction: column;
         gap: 7px;
         margin: 8px 0px; }
-        .categories .categories-container .form .input-group.success input {
+        .categories .categories-container .form .input-group.success input, .new-knife .categories-container .form .input-group.success input, .events .categories-container .form .input-group.success input, .new-knife .new-knife-container .form .input-group.success input, .events .events-container .form .input-group.success input, .new-knife .new-knife-container .form .input-group.success select {
           box-shadow: 0 0 0 1px #66cc33; }
-        .categories .categories-container .form .input-group.success .message {
+        .categories .categories-container .form .input-group.success .message, .new-knife .categories-container .form .input-group.success .message, .events .categories-container .form .input-group.success .message, .new-knife .new-knife-container .form .input-group.success .message, .events .events-container .form .input-group.success .message {
           display: block;
           color: #66cc33; }
-        .categories .categories-container .form .input-group.error input {
+        .categories .categories-container .form .input-group.error input, .new-knife .categories-container .form .input-group.error input, .events .categories-container .form .input-group.error input, .new-knife .new-knife-container .form .input-group.error input, .events .events-container .form .input-group.error input, .new-knife .new-knife-container .form .input-group.error select {
           box-shadow: 0 0 0 1px #cc3333; }
-        .categories .categories-container .form .input-group.error .message {
+        .categories .categories-container .form .input-group.error .message, .new-knife .categories-container .form .input-group.error .message, .events .categories-container .form .input-group.error .message, .new-knife .new-knife-container .form .input-group.error .message, .events .events-container .form .input-group.error .message {
           display: block;
           color: #cc3333; }
-        .categories .categories-container .form .input-group label {
+        .categories .categories-container .form .input-group label, .new-knife .categories-container .form .input-group label, .events .categories-container .form .input-group label, .new-knife .new-knife-container .form .input-group label, .events .events-container .form .input-group label {
           color: #f1f1f1;
           font-weight: lighter; }
-        .categories .categories-container .form .input-group input {
+        .categories .categories-container .form .input-group input, .new-knife .categories-container .form .input-group input, .events .categories-container .form .input-group input, .new-knife .new-knife-container .form .input-group input, .events .events-container .form .input-group input, .new-knife .new-knife-container .form .input-group select {
           font-size: 1.25rem;
           padding: .5em;
           background-color: #d1f0ff4d;
@@ -236,13 +267,13 @@ header {
           border-radius: .25em;
           color: #f1f1f1;
           font-weight: lighter; }
-          .categories .categories-container .form .input-group input:focus {
+          .categories .categories-container .form .input-group input:focus, .new-knife .categories-container .form .input-group input:focus, .events .categories-container .form .input-group input:focus, .new-knife .new-knife-container .form .input-group input:focus, .events .events-container .form .input-group input:focus, .new-knife .new-knife-container .form .input-group select:focus {
             box-shadow: 0 0 0 1px #00aaff; }
-        .categories .categories-container .form .input-group .message {
+        .categories .categories-container .form .input-group .message, .new-knife .categories-container .form .input-group .message, .events .categories-container .form .input-group .message, .new-knife .new-knife-container .form .input-group .message, .events .events-container .form .input-group .message {
           font-family: sans-serif;
           display: none;
           font-size: .75rem; }
-      .categories .categories-container .form .add-button {
+      .categories .categories-container .form .add-button, .new-knife .categories-container .form .add-button, .events .categories-container .form .add-button, .new-knife .new-knife-container .form .add-button, .events .events-container .form .add-button {
         width: 100%;
         padding: .2em 1em;
         font-size: 1.1rem;
@@ -255,7 +286,23 @@ header {
         border-radius: .25em;
         outline: none;
         cursor: pointer; }
-        .categories .categories-container .form .add-button:hover {
+        .categories .categories-container .form .add-button:hover, .new-knife .categories-container .form .add-button:hover, .events .categories-container .form .add-button:hover, .new-knife .new-knife-container .form .add-button:hover, .events .events-container .form .add-button:hover {
           background-color: #00aaff66; }
-        .categories .categories-container .form .add-button:focus {
+        .categories .categories-container .form .add-button:focus, .new-knife .categories-container .form .add-button:focus, .events .categories-container .form .add-button:focus, .new-knife .new-knife-container .form .add-button:focus, .events .events-container .form .add-button:focus {
           background-color: #00aaff66; }
+
+.new-knife {
+  margin-top: 0px; }
+  .new-knife .new-knife-container .form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    justify-content: center; }
+    .new-knife .new-knife-container .form select option {
+      background: #333; }
+    .new-knife .new-knife-container .form button {
+      height: 44px; }
+
+.events {
+  margin-top: 0px; }

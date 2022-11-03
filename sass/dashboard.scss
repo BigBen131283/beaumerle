@@ -5,6 +5,20 @@
 @import './layout/navigation';
 @import './pages/dashboard';
 
+body
+{
+    background-image: url(../images/loginpage/fire.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contenu
+{
+    justify-content: flex-start;
+    padding: 0px 30px;
+}
+
 .categories
 {
     display: flex;
@@ -13,6 +27,7 @@
     align-items: center;
     background-color: $formBackgroundDark;
     padding-top: 20px;
+    margin: 100px 0px;
 
     h1{
         width: 100%;
@@ -103,5 +118,41 @@
                 }
             }
         }
+    }
+}
+
+.new-knife{
+    @extend .categories;
+    margin-top: 0px;
+
+    .new-knife-container{
+        @extend .categories-container;
+
+        .form
+        {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            grid-auto-rows: minmax(100px, auto);
+            justify-content: center;
+            select{
+                @extend input;
+                option{
+                    background: $alternateBackground;
+                }
+            }
+            button{
+                height: 44px;
+            }
+        }
+    }
+}
+
+.events{
+    @extend .categories;
+    margin-top: 0px;
+
+    .events-container{
+        @extend .categories-container
     }
 }
